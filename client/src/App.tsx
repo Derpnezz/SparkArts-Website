@@ -3,14 +3,13 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
-import Donate from "@/pages/Donate";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
+      {/* Only need home route since other pages are external */}
       <Route path="/" component={Home} />
-      <Route path="/donate" component={Donate} />
       <Route component={NotFound} />
     </Switch>
   );

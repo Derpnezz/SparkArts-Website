@@ -11,19 +11,24 @@ export default function Footer() {
               Empowering artists and enriching communities through creative expression.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/">
-                  <a className="text-gray-600 hover:text-primary transition-colors">Home</a>
-                </Link>
+                <a href="/" className="text-gray-600 hover:text-primary transition-colors">
+                  Home
+                </a>
               </li>
               <li>
-                <Link href="/donate">
-                  <a className="text-gray-600 hover:text-primary transition-colors">Donate</a>
-                </Link>
+                <a 
+                  href="https://external-donation-site.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary transition-colors"
+                >
+                  Donate
+                </a>
               </li>
               <li>
                 <a 
@@ -37,7 +42,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact</h3>
             <p className="text-gray-600">
@@ -47,7 +52,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500">
             © {new Date().getFullYear()} ArtSpace. All rights reserved.
