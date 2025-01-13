@@ -8,7 +8,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">SparkArts</h3>
             <p className="text-gray-600">
-              Empowering young minds artists and enriching communities through creative expression.
+              Empowering young minds and ||
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 
@@ -16,23 +17,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Socials</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://www.instagram.com/sparkartsmoco/" target="_blank" className="text-gray-600 hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/sparkartsmoco/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
                   Instagram
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://external-donation-site.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Donate
+                <a href="https://www.instagram.com/sparkartsmoco/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                  Placeholder
                 </a>
               </li>
               <li>
-                <a href="/signup" className="text-gray-600 hover:text-primary transition-colors">
-                  Sign Up
+                <a href="https://www.instagram.com/sparkartsmoco/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                  Placeholder
                 </a>
               </li>
             </ul>

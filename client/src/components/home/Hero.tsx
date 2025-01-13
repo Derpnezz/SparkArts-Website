@@ -28,7 +28,7 @@ export default function Hero() {
               rel="noopener noreferrer"
             >
               <Button size="lg" variant="default">
-                Support Our Cause
+                Support Us
               </Button>
             </a>
 

@@ -12,8 +12,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 const schools = [
-  "Brown Station Elementary School",
-  "https://external-student-signup.com/brown-station",
+  "Brown Station Elementary School", "https://docs.google.com/forms/d/e/1FAIpQLScXuMY2d6_OBRrzxu9kzj3RuZ21ahqGowXaiu8TS9ulhW-uIA/viewform?usp=preview",
   "Clopper Mill Elementary",
   "https://external-student-signup.com/clopper-mill",
   "Gaithersburg Elementary School",
@@ -26,7 +25,7 @@ export default function SignUp() {
 
   const handleSignUp = () => {
     if (registrationType === "volunteer") {
-      window.open("https://external-volunteer-signup.com", "_blank", "noopener,noreferrer");
+      window.open("https://docs.google.com/forms/d/1soRY6YOasIm9xJDj2v3-lhkZxu6SFSBbRepi6iJ-avg/preview", "_blank", "noopener,noreferrer");
     } else if (registrationType === "child" && selectedSchool) {
       // Find the link for the selected school (it's at index + 1)
       const schoolIndex = schools.findIndex((item, index) => index % 2 === 0 && item === selectedSchool);

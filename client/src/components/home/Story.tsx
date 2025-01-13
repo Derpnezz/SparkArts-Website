@@ -7,7 +7,7 @@ export default function Story() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Growing up, I was privileged enough to attend art camp over the summer. When i was younger, i was very introverted and shy and never spoke. One summer, there was a camp volunteer who helped me come out of my shell and made me realize the beauty of art. She helped me exercise my creativity, which benefits me and my ideas in the present. I learned and grew a lot because of art, It helped me when I was struggling during covid. I believe that all kids deserve the same opportunities as me, despite their financial status or families situations. Kids cannot choose which family they are born into, so they deserve to have the equal opportunity to have art classes. I've noticed that kids now are not as creative and I think this will pose as a problem when they are older. They exercise their mind less and this will be a road-blocker when they need to find ways to solve issues.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function Story() {
               />
               <h3 className="text-xl font-semibold mb-2">Supporting Artists</h3>
               <p className="text-gray-600">
-                We provide resources, space, and opportunities for artists to grow and showcase their work.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </CardContent>
           </Card>
@@ -35,7 +35,7 @@ export default function Story() {
               />
               <h3 className="text-xl font-semibold mb-2">Community Engagement</h3>
               <p className="text-gray-600">
-                Through exhibitions and workshops, we bring art directly to our local communities.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </CardContent>
           </Card>
@@ -49,7 +49,7 @@ export default function Story() {
               />
               <h3 className="text-xl font-semibold mb-2">Education Programs</h3>
               <p className="text-gray-600">
-                We believe in art education for all ages, offering classes and workshops year-round.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </CardContent>
           </Card>
