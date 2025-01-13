@@ -7,15 +7,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Card } from "@/components/ui/card";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 const schools = [
-  "Montgomery Blair High School",
-  "Albert Einstein High School",
-  "Paint Branch High School",
-  "Springbrook High School",
-  "James Hubert Blake High School",
+  "Brown Station Elementary School",
+  "https://external-student-signup.com/brown-station",
+  "Clopper Mill Elementary",
+  "https://external-student-signup.com/clopper-mill",
+  "Gaithersburg Elementary School",
+  "https://external-student-signup.com/gaithersburg"
 ];
 
 export default function SignUp() {
@@ -26,7 +28,10 @@ export default function SignUp() {
     if (registrationType === "volunteer") {
       window.open("https://external-volunteer-signup.com", "_blank", "noopener,noreferrer");
     } else if (registrationType === "child" && selectedSchool) {
-      window.open(`https://external-student-signup.com?school=${encodeURIComponent(selectedSchool)}`, "_blank", "noopener,noreferrer");
+      // Find the link for the selected school (it's at index + 1)
+      const schoolIndex = schools.findIndex((item, index) => index % 2 === 0 && item === selectedSchool);
+      const schoolLink = schools[schoolIndex + 1];
+      window.open(schoolLink, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -42,55 +47,57 @@ export default function SignUp() {
             </p>
           </div>
 
-          <div className="space-y-6 bg-white p-6 rounded-lg shadow-sm">
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900">Registration Type</label>
-              <Select
-                value={registrationType}
-                onValueChange={(value) => {
-                  setRegistrationType(value);
-                  setSelectedSchool("");
-                }}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select registration type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="child">Child Registration</SelectItem>
-                  <SelectItem value="volunteer">Volunteer Registration</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            {registrationType === "child" && (
+          <Card className="p-6">
+            <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-900">Select School</label>
+                <label className="text-sm font-medium text-gray-900">Registration Type</label>
                 <Select
-                  value={selectedSchool}
-                  onValueChange={setSelectedSchool}
+                  value={registrationType}
+                  onValueChange={(value) => {
+                    setRegistrationType(value);
+                    setSelectedSchool("");
+                  }}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select your school" />
+                    <SelectValue placeholder="Select registration type" />
                   </SelectTrigger>
                   <SelectContent>
-                    {schools.map((school) => (
-                      <SelectItem key={school} value={school}>
-                        {school}
-                      </SelectItem>
-                    ))}
+                    <SelectItem value="child">Child Registration</SelectItem>
+                    <SelectItem value="volunteer">Volunteer Registration</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-            )}
 
-            <Button
-              className="w-full"
-              onClick={handleSignUp}
-              disabled={!registrationType || (registrationType === "child" && !selectedSchool)}
-            >
-              Continue to Registration
-            </Button>
-          </div>
+              {registrationType === "child" && (
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-900">Select School</label>
+                  <Select
+                    value={selectedSchool}
+                    onValueChange={setSelectedSchool}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select your school" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {schools.filter((_, index) => index % 2 === 0).map((school) => (
+                        <SelectItem key={school} value={school}>
+                          {school}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
+              <Button
+                className="w-full"
+                onClick={handleSignUp}
+                disabled={!registrationType || (registrationType === "child" && !selectedSchool)}
+              >
+                Continue to Registration
+              </Button>
+            </div>
+          </Card>
         </div>
       </div>
       <Footer />
