@@ -7,7 +7,7 @@ export default function Story() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            For over a decade, we've been dedicated to nurturing artistic talent and bringing art to communities.
+            Growing up, I was privileged enough to attend art camp over the summer. When i was younger, i was very introverted and shy and never spoke. One summer, there was a camp volunteer who helped me come out of my shell and made me realize the beauty of art. She helped me exercise my creativity, which benefits me and my ideas in the present. I learned and grew a lot because of art, It helped me when I was struggling during covid. I believe that all kids deserve the same opportunities as me, despite their financial status or families situations. Kids cannot choose which family they are born into, so they deserve to have the equal opportunity to have art classes. I've noticed that kids now are not as creative and I think this will pose as a problem when they are older. They exercise their mind less and this will be a road-blocker when they need to find ways to solve issues.
           </p>
         </div>
 

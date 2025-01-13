@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <a href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-pink-600 bg-clip-text text-transparent">
-            ArtSpace
+            SparkArts
           </a>
 
           <div className="hidden sm:flex space-x-8 items-center">
@@ -21,11 +21,7 @@ export default function Navbar() {
             >
               Donate
             </a>
-            <a 
-              href="https://external-signup.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+            <a href="/signup">
               <Button variant="default">Sign Up</Button>
             </a>
           </div>

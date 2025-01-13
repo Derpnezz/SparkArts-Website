@@ -32,13 +32,9 @@ export default function Hero() {
               </Button>
             </a>
 
-            <a 
-              href="https://external-signup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/signup">
               <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20">
-                Join As Artist
+                Join Our Program
               </Button>
             </a>
           </div>
