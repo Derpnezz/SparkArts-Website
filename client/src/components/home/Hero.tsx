@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Hero() {
   return (
@@ -27,16 +28,16 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" variant="default">
+              <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20">
                 Support Us
               </Button>
             </a>
 
-            <a href="/signup">
-              <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20">
+            <Link href="/signup">
+              <Button size="lg" variant="default">
                 Join Our Program
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

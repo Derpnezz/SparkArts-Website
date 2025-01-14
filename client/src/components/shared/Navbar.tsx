@@ -14,8 +14,16 @@ export default function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
               Home
             </Link>
+            <a 
+              href="https://external-donation-site.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
+              Donate
+            </a>
             <Link href="/signup" className="text-gray-700 hover:text-primary transition-colors">
-              Join Our Program
+              <Button variant="default">Sign Up</Button>
             </Link>
           </div>
         </div>
