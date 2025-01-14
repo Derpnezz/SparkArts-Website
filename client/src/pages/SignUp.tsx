@@ -24,6 +24,8 @@ export default function SignUp() {
   const [selectedSchool, setSelectedSchool] = useState<string>("");
 
   const handleSignUp = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     if (registrationType === "volunteer") {
       window.open("https://docs.google.com/forms/d/1soRY6YOasIm9xJDj2v3-lhkZxu6SFSBbRepi6iJ-avg/preview", "_blank", "noopener,noreferrer");
     } else if (registrationType === "child" && selectedSchool) {
