@@ -7,8 +7,8 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1507643179773-3e975d7ac515')`,
-          filter: 'brightness(0.3)'
+          backgroundImage: `url('https://cdn.discordapp.com/attachments/949416614510620702/1328546907286540298/template_1.png?ex=67871939&is=6785c7b9&hm=f2461881c300e9aa997ad4161bcff7a82830255616671eb4ef7656cb4ffd8636&')`,
+          filter: 'brightness(0.45)'
         }}
       />
 
@@ -33,7 +33,8 @@ export default function Hero() {
               </Button>
             </a>
 
-            <Link href="/signup">
+            <Link href="/signup"
+              onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>              
               <Button size="lg" variant="default">
                 Join Our Program
               </Button>

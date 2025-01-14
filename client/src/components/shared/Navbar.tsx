@@ -22,7 +22,8 @@ export default function Navbar() {
             >
               Donate
             </a>
-            <Link href="/signup" className="text-gray-700 hover:text-primary transition-colors">
+            <Link href="/signup" className="text-gray-700 hover:text-primary transition-colors"
+              onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
               <Button variant="default">Sign Up</Button>
             </Link>
           </div>
