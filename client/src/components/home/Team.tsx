@@ -75,9 +75,9 @@ export default function Team() {
                 index % 2 === 1 && "md:flex-row-reverse"
               )}
             >
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-2/5">
                 <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
-                  <AspectRatio ratio={3/4}>
+                  <AspectRatio ratio={4/5}>
                     <img
                       src={member.image}
                       alt={member.name}
@@ -86,7 +86,7 @@ export default function Team() {
                   </AspectRatio>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 space-y-4">
+              <div className="w-full md:w-3/5 space-y-4 px-4">
                 <h3 className="text-2xl font-semibold">{member.name}</h3>
                 <p className="text-lg text-gray-600 font-medium">{member.title}</p>
                 <p className="text-gray-600 leading-relaxed">{member.description}</p>
