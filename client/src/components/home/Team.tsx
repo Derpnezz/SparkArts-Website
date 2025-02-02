@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import valeriePhoto from "./images/websitephoto_valerie.jpg";
 
 interface TeamMember {
   name: string;
@@ -13,7 +14,7 @@ const teamMembers: TeamMember[] = [
     name: "Valerie Tsang",
     title: "Founder and Executive Director",
     description: "Hi!! My name is Valerie Tsang. I'm a freshman at Poolesville High School and the founder of SparkArts! When I was younger, I was privileged to go to art camp every summer. I learned a lot about my interest in art early on, and there were camp counselors who really helped me come out of my shell as a shy kid. I want to help create equal art opportunities without financial barriers. Through SparkArts, I hope all children can be free to explore their artistic creativity, have fun with art, and grow as artists/students.",
-    image: "./images/websitephoto_valerie.jpg"
+    image: valeriePhoto
   },
   {
     name: "Jessica Lema",
