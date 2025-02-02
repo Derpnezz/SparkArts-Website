@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import heroImage from './hero_background_SparkArts.png';
 
 export default function Hero() {
   return (
@@ -7,13 +8,13 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url('https://cdn.discordapp.com/attachments/949416614510620702/1328546907286540298/template_1.png?ex=67871939&is=6785c7b9&hm=f2461881c300e9aa997ad4161bcff7a82830255616671eb4ef7656cb4ffd8636&')`,
+          backgroundImage: `url(${heroImage})`,
           filter: 'brightness(0.45)'
         }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transforming Lives Through Art
           </h1>
