@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import heroImage from './hero_background_SparkArts.png';
+import heroImage from './images/hero_background_SparkArts.png';
 
 export default function Hero() {
   return (

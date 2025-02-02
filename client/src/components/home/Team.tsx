@@ -10,21 +10,45 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Sarah Johnson",
-    title: "Executive Director",
-    description: "With over 15 years of experience in arts education, Sarah leads our organization with passion and vision. She has transformed numerous community art programs and believes in the power of creativity to change lives.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop"
+    name: "Valerie Tsang",
+    title: "Founder and Executive Director",
+    description: "Hi!! My name is Valerie Tsang. I'm a freshman at Poolesville High School and the founder of SparkArts! When I was younger, I was privileged to go to art camp every summer. I learned a lot about my interest in art early on, and there were camp counselors who really helped me come out of my shell as a shy kid. I want to help create equal art opportunities without financial barriers. Through SparkArts, I hope all children can be free to explore their artistic creativity, have fun with art, and grow as artists/students.",
+    image: "./images/websitephoto_valerie.jpg"
   },
   {
-    name: "Michael Chen",
-    title: "Creative Director",
-    description: "Michael brings his innovative approach to our artistic programs. His background in fine arts and digital media helps bridge traditional and contemporary art forms in our community initiatives.",
+    name: "Jessica Lema",
+    title: "Outreach Manager",
+    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS and the secretary at SparkArts! Seeing the joy of children and people who don’t have much especially in times like these, brings nothing but joy to my heart. I’m incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible. matthew 19:14",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    name: "Elena Rodriguez",
-    title: "Community Outreach Manager",
-    description: "Elena specializes in creating meaningful connections between artists and communities. Her work has been instrumental in expanding our reach to underserved neighborhoods.",
+    name: "Cynthia Yu",
+    title: "Creative Director",
+    description: "Hi, I'm Cynthia Yu and I'm a 9th grader at Poolesville High School. I'm the creative director for SparkArts! Art and drawing has always been an important part of my life so I was excited to join SparkArts to spread it to others. I hope that through SparkArts, I can help other children can find their passion in art, whether it be with color pencils, origami, clay, digital art, and so much more!",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    name: "Liam Chau",
+    title: "Treasurer",
+    description: "Hi, I'm Liam Chau! I'm a 9th grader at Northwest HS and the treasurer at SparkArts. I joined SparkArts because when I was in elementary school, whenever I helped other kids out with their work they would be happy that I helped them, and it really sparked my passion for helping other kids. With SparkArts, I hope I can help other kids with art to further their creativity and passion for art.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    name: "Gabriel Yee",
+    title: "Program Director",
+    description: "Hi, I'm Gabriel Yee! I'm a 9th grader at Northwest HS and I'm the Program Director for SparkArts! When I was a child, I didn't have many creative opportunities and it caused me to feel trapped and demotivated. With SparkArts, I hope to be able to give children a creative outlet where they can express their passions in arts.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    name: "Karla Cruz Velasquez",
+    title: "Communications Manager",
+    description: "Hello! My name is Karla Cruz Velasquez. I’m a freshman at Quince Orchard High School and my role is communications manager in this program. Growing up I didn’t have many opportunities. When I was younger I remember always wanting to go to an art camp every summer, but I wasn’t very privileged like my peers which made it hard for me to express myself. I also felt like i could not improve in my interest in art , which gave me a trapped feeling. During my time in this program, I hope to make students come and express themselves through art, and to be able to do things they are genuinely interested in without their parents needing to work harder just for their own kid’s happiness because happiness never has to come with a price.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    name: "Joshua Vu",
+    title: "Volunteer Engagement Manager",
+    description: "Hey, I’m Josh! I’m a freshman at Poolesville High School and the Volunteer Engagement Manager at SparkArts. As a kid, I didn’t have a big interest in art but I learned how dynamic and expressive it can be. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"
   }
 ];
