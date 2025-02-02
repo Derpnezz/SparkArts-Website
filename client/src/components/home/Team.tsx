@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import valeriePhoto from "./images/websitephoto_valerie.jpg";
 import jessicaPhoto from "./images/websitephoto_jessica.jpg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
@@ -75,11 +76,15 @@ export default function Team() {
               )}
             >
               <div className="w-full md:w-1/2">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-[400px] object-cover rounded-lg shadow-lg"
-                />
+                <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                  <AspectRatio ratio={3/4}>
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                </div>
               </div>
               <div className="w-full md:w-1/2 space-y-4">
                 <h3 className="text-2xl font-semibold">{member.name}</h3>
