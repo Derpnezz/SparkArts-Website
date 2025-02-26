@@ -71,7 +71,7 @@ export default function Team() {
           <CollapsibleTrigger asChild>
             <Button 
               variant="ghost" 
-              className="w-full flex items-center justify-between mb-8"
+              className="w-full flex items-center justify-between mb-8 hover:bg-[#e6d9c7]"
             >
               <h2 className="text-6xl font-bold">Meet Our Team</h2>
               <ChevronDown className="h-6 w-6 transition-transform duration-200 [&[data-state=open]>svg]:rotate-180" />
