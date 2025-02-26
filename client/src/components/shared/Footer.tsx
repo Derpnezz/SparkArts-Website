@@ -46,7 +46,10 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500">
-            © {new Date().getFullYear()} SparkArts. All rights reserved.
+            © {new Date().getFullYear()} SparkArts Corporation. All rights reserved.
+          </p>
+          <p className="text-center text-gray-500">
+            Website managed by Gabriel Yee
           </p>
         </div>
       </div>

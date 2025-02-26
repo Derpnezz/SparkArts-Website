@@ -15,12 +15,12 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transforming Lives Through Art
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-5">
+            Unlocking Creativity, One Child at a Time
           </h1>
 
-          <p className="text-xl text-gray-200 mb-8">
-            Join us in our mission to make art accessible to everyone and empower creative voices in our community.
+          <p className="text-xl text-gray-200 mb-6">
+            We’re on a mission to bring free, hands-on art experiences to elementary school students.
           </p>
 
           <div className="space-x-4">
