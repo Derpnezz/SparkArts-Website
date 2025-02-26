@@ -1,6 +1,8 @@
-
 import { cn } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 import valeriePhoto from "./images/websitephoto_valerie.jpg";
 import jessicaPhoto from "./images/websitephoto_jessica.jpg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
@@ -26,7 +28,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jessica Lema",
     title: "Outreach Manager",
-    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS! Seeing the joy of children and people who don’t have much especially in times like these, brings nothing but joy to my heart. I’m incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible. matthew 19:14",
+    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS! Seeing the joy of children and people who don't have much especially in times like these, brings nothing but joy to my heart. I'm incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible. matthew 19:14",
     image: jessicaPhoto
   },
   {
@@ -65,35 +67,48 @@ export default function Team() {
   return (
     <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl font-bold text-center mb-16">Meet Our Team</h2>
-        <div className="space-y-20">
-          {teamMembers.map((member, index) => (
-            <div 
-              key={member.name}
-              className={cn(
-                "flex flex-col md:flex-row items-center gap-8",
-                index % 2 === 1 && "md:flex-row-reverse"
-              )}
+        <Collapsible>
+          <CollapsibleTrigger asChild>
+            <Button 
+              variant="ghost" 
+              className="w-full flex items-center justify-between mb-8"
             >
-              <div className="w-full md:w-2/5">
-                <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
-                  <AspectRatio ratio={4/5}>
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
+              <h2 className="text-6xl font-bold">Meet Our Team</h2>
+              <ChevronDown className="h-6 w-6 transition-transform duration-200 [&[data-state=open]>svg]:rotate-180" />
+            </Button>
+          </CollapsibleTrigger>
+
+          <CollapsibleContent>
+            <div className="space-y-20">
+              {teamMembers.map((member, index) => (
+                <div 
+                  key={member.name}
+                  className={cn(
+                    "flex flex-col md:flex-row items-center gap-8",
+                    index % 2 === 1 && "md:flex-row-reverse"
+                  )}
+                >
+                  <div className="w-full md:w-2/5">
+                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                      <AspectRatio ratio={4/5}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </AspectRatio>
+                    </div>
+                  </div>
+                  <div className="w-full md:w-3/5 space-y-4 px-4">
+                    <h3 className="text-2xl font-semibold">{member.name}</h3>
+                    <p className="text-lg text-gray-600 font-medium">{member.title}</p>
+                    <p className="text-gray-600 leading-relaxed">{member.description}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="w-full md:w-3/5 space-y-4 px-4">
-                <h3 className="text-2xl font-semibold">{member.name}</h3>
-                <p className="text-lg text-gray-600 font-medium">{member.title}</p>
-                <p className="text-gray-600 leading-relaxed">{member.description}</p>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
     </section>
   );
