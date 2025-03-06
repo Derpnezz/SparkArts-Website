@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useEmblaCarousel } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function ImageSlideshow() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
