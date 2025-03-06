@@ -7,10 +7,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import useEmblaCarousel from "embla-carousel-react";
+import { useEmblaCarousel } from "embla-carousel-react";
 
 export default function ImageSlideshow() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [api, setApi] = useState<any>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const images = [
@@ -38,39 +38,39 @@ export default function ImageSlideshow() {
 
   // Update selected index when slide changes
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+  }, [api]);
 
   // Navigate to a specific slide when a dot is clicked
   const scrollTo = useCallback(
     (index: number) => {
-      if (!emblaApi) return;
-      emblaApi.scrollTo(index);
+      if (!api) return;
+      api.scrollTo(index);
     },
-    [emblaApi]
+    [api]
   );
 
   // Auto-slide functionality
   useEffect(() => {
-    if (!emblaApi) return;
-
-    emblaApi.on("select", onSelect);
+    if (!api) return;
+    
+    api.on("select", onSelect);
     
     // Auto-slide every 6 seconds
     const autoplayInterval = setInterval(() => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
+      if (api.canScrollNext()) {
+        api.scrollNext();
       } else {
-        emblaApi.scrollTo(0);
+        api.scrollTo(0);
       }
     }, 6000);
 
     return () => {
-      emblaApi.off("select", onSelect);
+      api.off("select", onSelect);
       clearInterval(autoplayInterval);
     };
-  }, [emblaApi, onSelect]);
+  }, [api, onSelect]);
 
   return (
     <section className="py-16 bg-white">
@@ -78,15 +78,14 @@ export default function ImageSlideshow() {
         <h2 className="text-4xl font-bold text-center mb-12">Our Workshops in Action</h2>
         
         <div className="relative w-full max-w-5xl mx-auto">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
+          <Carousel 
+            setApi={setApi} 
+            className="w-full" 
+            opts={{ loop: true, align: "start" }}
+          >
+            <CarouselContent>
               {images.map((image, index) => (
-                <div 
-                  key={index} 
-                  className="min-w-0 flex-[0_0_100%] pl-4 h-[400px]"
-                  role="group"
-                  aria-roledescription="slide"
-                >
+                <CarouselItem key={index} className="md:basis-1/1 h-[400px]">
                   <div className="p-1 h-full">
                     <div className="rounded-xl overflow-hidden h-full">
                       <img
@@ -96,19 +95,12 @@ export default function ImageSlideshow() {
                       />
                     </div>
                   </div>
-                </div>
+                </CarouselItem>
               ))}
-            </div>
-          </div>
-          
-          <CarouselPrevious 
-            onClick={() => emblaApi?.scrollPrev()} 
-            className="absolute left-4 lg:left-[-60px] top-1/2 transform -translate-y-1/2" 
-          />
-          <CarouselNext 
-            onClick={() => emblaApi?.scrollNext()} 
-            className="absolute right-4 lg:right-[-60px] top-1/2 transform -translate-y-1/2" 
-          />
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 lg:left-[-60px] top-1/2 transform -translate-y-1/2" />
+            <CarouselNext className="absolute right-4 lg:right-[-60px] top-1/2 transform -translate-y-1/2" />
+          </Carousel>
           
           <div className="flex justify-center mt-6">
             {images.map((_, index) => (
