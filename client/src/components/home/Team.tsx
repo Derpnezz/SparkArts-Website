@@ -1,114 +1,68 @@
-import { cn } from "@/lib/utils";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
-import valeriePhoto from "./images/websitephoto_valerie.jpg";
-import jessicaPhoto from "./images/websitephoto_jessica.jpg";
-import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
-import liamPhoto from "./images/websitephoto_liam.jpg";
-import gabrielPhoto from "./images/websitephoto_gabriel.jpg";
-import karlaPhoto from "./images/websitephoto_karla.jpg";
-import joshuaPhoto from "./images/websitephoto_joshua.jpg";
-
-interface TeamMember {
-  name: string;
-  title: string;
-  description: string;
-  image: string;
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Valerie Tsang",
-    title: "Founder and Executive Director",
-    description: "Hi! My name is Valerie Tsang. I'm a freshman at Poolesville High School and the founder of SparkArts! When I was younger, I was privileged to go to art camp every summer. I learned a lot about my interest in art early on, and there were camp counselors who really helped me come out of my shell as a shy kid. I want to help create equal art opportunities without financial barriers. Through SparkArts, I hope all children can be free to explore their artistic creativity, have fun with art, and grow as artists/students.",
-    image: valeriePhoto
-  },
-  {
-    name: "Jessica Lema",
-    title: "Outreach Manager",
-    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS! Seeing the joy of children and people who don't have much especially in times like these, brings nothing but joy to my heart. I'm incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible. matthew 19:14",
-    image: jessicaPhoto
-  },
-  {
-    name: "Cynthia Yu",
-    title: "Creative Director",
-    description: "Hi, I'm Cynthia Yu and I'm a 9th grader at Poolesville High School. Art and drawing has always been an important part of my life so I was excited to join SparkArts to spread it to others. I hope that through SparkArts, I can help other children can find their passion in art, whether it be with color pencils, origami, clay, digital art, and so much more!",
-    image: cynthiaPhoto
-  },
-  {
-    name: "Liam Chau",
-    title: "Treasurer",
-    description: "Hi, I'm Liam Chau and I'm a 9th grader at Northwest HS. I joined SparkArts because when I was in elementary school, whenever I helped other kids out with their work they would be happy that I helped them, and it really sparked my passion for helping other kids. With SparkArts, I hope I can help other kids with art to further their creativity and passion for art.",
-    image: liamPhoto
-  },
-  {
-    name: "Karla Cruz Velasquez",
-    title: "Communications Manager",
-    description: "Hello! My name is Karla Cruz Velasquez and I’m a freshman at Quince Orchard High School. Growing up I didn’t have many opportunities. I remember dreaming to go to an art camp every summer, but unlike my peers, I wasn’t very privileged and couldn't go. I also felt like I could not improve in my interest in art, which gave me a trapped feeling. Through this program, I hope to give students the chance to explore their creativity and express themselves freely through art. Happiness shouldn’t come with a price—it should be a gift we all can share.",
-    image: karlaPhoto
-  },
-  {
-    name: "Joshua Vu",
-    title: "Volunteer Engagement Manager",
-    description: "Hey, I’m Josh and I’m a freshman at Poolesville High School. As a kid, I didn’t have a big interest in art but I learned how dynamic and expressive it can be. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
-    image: joshuaPhoto
-  },
-  {
-    name: "Gabriel Yee",
-    title: "Program Director",
-    description: "Hi, I'm Gabriel Yee and I'm a 9th grader in the Middle College program at Northwest HS! When I was a child, I didn't have many creative opportunities and it caused me to feel trapped and demotivated. With SparkArts, I hope to be able to give children a creative outlet where they can express their passions in arts.",
-    image: gabrielPhoto
-  }
-];
+import React from "react";
 
 export default function Team() {
   return (
     <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Collapsible>
-          <CollapsibleTrigger asChild>
-            <Button 
-              variant="ghost" 
-              className="w-full flex items-center justify-between mb-4 hover:bg-[#e6d9c7] border-2 border-[#d4c4b0] rounded-lg px-6 py-7 transition-all duration-200 hover:shadow-md"
-            >
-              <h2 className="text-6xl font-bold">Meet Our Team</h2>
-              <ChevronDown className="h-8 w-8 transition-transform duration-200 [&[data-state=open]>svg]:rotate-180" />
-            </Button>
-          </CollapsibleTrigger>
+        <h2 className="text-6xl font-bold text-center mb-16">MEET SPARKARTS</h2>
 
-          <CollapsibleContent>
-            <div className="space-y-20">
-              {teamMembers.map((member, index) => (
-                <div 
-                  key={member.name}
-                  className={cn(
-                    "flex flex-col md:flex-row items-center gap-8",
-                    index % 2 === 1 && "md:flex-row-reverse"
-                  )}
-                >
-                  <div className="w-full md:w-2/5">
-                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
-                      <AspectRatio ratio={4/5}>
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </AspectRatio>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-3/5 space-y-4 px-4">
-                    <h3 className="text-2xl font-semibold">{member.name}</h3>
-                    <p className="text-lg text-gray-600 font-medium">{member.title}</p>
-                    <p className="text-gray-600 leading-relaxed">{member.description}</p>
-                  </div>
-                </div>
-              ))}
+        {/* About Us Section */}
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
+          <div className="w-full md:w-1/2">
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                alt="SparkArts Team"
+                className="w-full h-full object-cover"
+              />
             </div>
-          </CollapsibleContent>
-        </Collapsible>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <h3 className="text-3xl font-semibold">About Us</h3>
+            <p className="text-gray-600 leading-relaxed">
+              SparkArts is a student-led initiative dedicated to bringing arts education to underserved communities. 
+              Founded by passionate high school students, our mission is to create equal art opportunities 
+              without financial barriers. We believe that every child deserves the chance to explore their 
+              creativity, develop artistic skills, and experience the joy of self-expression through various 
+              art forms.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Our team consists of dedicated young individuals who are committed to making a difference 
+              in our community through the power of art and creativity.
+            </p>
+          </div>
+        </div>
+
+        {/* What We Do Section */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="w-full md:w-1/2">
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1559302966-9a941ccbc76e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                alt="Art Workshop"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <h3 className="text-3xl font-semibold">What Do We Do?</h3>
+            <p className="text-gray-600 leading-relaxed">
+              At SparkArts, we organize free art workshops, classes, and events for children 
+              in underserved communities. Our programs cover a wide range of artistic disciplines, 
+              including drawing, painting, sculpture, digital art, and more.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              We partner with local community centers, schools, and organizations to reach as many 
+              children as possible. Our team of volunteers, consisting of talented high school students 
+              and professional artists, provides guidance and mentorship to help young artists 
+              develop their skills and confidence.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Through our programs, we aim to inspire creativity, build self-esteem, and create a 
+              supportive community where young artists can thrive.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
