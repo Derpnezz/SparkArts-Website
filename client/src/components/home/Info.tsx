@@ -4,14 +4,14 @@ export default function Team() {
   return (
     <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl font-bold text-center mb-16">MEET SPARKARTS</h2>
+        <h2 className="text-6xl font-bold text-center mb-16">Meet SparkArts</h2>
 
         {/* About Us Section */}
         <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
           <div className="w-full md:w-1/2">
             <div className="rounded-lg shadow-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                src="https://www.quillsuk.co.uk/wp-content/uploads/2018/08/rawpixel-684806-unsplash-1030x686.jpg"
                 alt="SparkArts Team"
                 className="w-full h-full object-cover"
               />
@@ -38,7 +38,7 @@ export default function Team() {
           <div className="w-full md:w-1/2">
             <div className="rounded-lg shadow-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1559302966-9a941ccbc76e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                src="https://img.freepik.com/premium-photo/happy-kids-doing-arts-crafts-together_269655-33883.jpg"
                 alt="Art Workshop"
                 className="w-full h-full object-cover"
               />
