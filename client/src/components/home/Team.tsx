@@ -1,8 +1,13 @@
-import { cn } from "@/lib/utils";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import React from "react";
+import { 
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger
+} from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+
 import valeriePhoto from "./images/websitephoto_valerie.jpg";
 import jessicaPhoto from "./images/websitephoto_jessica.jpg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
@@ -10,6 +15,7 @@ import liamPhoto from "./images/websitephoto_liam.jpg";
 import gabrielPhoto from "./images/websitephoto_gabriel.jpg";
 import karlaPhoto from "./images/websitephoto_karla.jpg";
 import joshuaPhoto from "./images/websitephoto_joshua.jpg";
+
 
 interface TeamMember {
   name: string;
@@ -22,19 +28,19 @@ const teamMembers: TeamMember[] = [
   {
     name: "Valerie Tsang",
     title: "Founder and Executive Director",
-    description: "Hi! My name is Valerie Tsang. I'm a freshman at Poolesville High School and the founder of SparkArts! When I was younger, I was privileged to go to art camp every summer. I learned a lot about my interest in art early on, and there were camp counselors who really helped me come out of my shell as a shy kid. I want to help create equal art opportunities without financial barriers. Through SparkArts, I hope all children can be free to explore their artistic creativity, have fun with art, and grow as artists/students.",
+    description: "Hi! I'm Valerie, and I'm the founder of SparkArts! I want to help create equal art opportunities without financial barriers.",
     image: valeriePhoto
   },
   {
     name: "Jessica Lema",
     title: "Outreach Manager",
-    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS! Seeing the joy of children and people who don't have much especially in times like these, brings nothing but joy to my heart. I'm incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible. matthew 19:14",
+    description: "Hi, I'm Jessica! I love connecting with people and helping to create opportunities for children to express themselves through art.",
     image: jessicaPhoto
   },
   {
     name: "Cynthia Yu",
     title: "Creative Director",
-    description: "Hi, I'm Cynthia Yu and I'm a 9th grader at Poolesville High School. Art and drawing has always been an important part of my life so I was excited to join SparkArts to spread it to others. I hope that through SparkArts, I can help other children can find their passion in art, whether it be with color pencils, origami, clay, digital art, and so much more!",
+    description: "Hello! I'm Cynthia and I love designing art programs that inspire creativity in young minds and help them develop new skills.",
     image: cynthiaPhoto
   },
   {
@@ -65,50 +71,26 @@ const teamMembers: TeamMember[] = [
 
 export default function Team() {
   return (
-    <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
+    <section className="py-24" style={{ backgroundColor: "#003366" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Collapsible>
-          <CollapsibleTrigger asChild>
-            <Button 
-              variant="ghost" 
-              className="w-full flex items-center justify-between mb-4 hover:bg-[#e6d9c7] border-2 border-[#d4c4b0] rounded-lg px-6 py-7 transition-all duration-200 hover:shadow-md"
-            >
-              <h2 className="text-6xl font-bold">Meet Our Team</h2>
-              <ChevronDown className="h-8 w-8 transition-transform duration-200 [&[data-state=open]>svg]:rotate-180" />
-            </Button>
-          </CollapsibleTrigger>
+        <h2 className="text-6xl font-bold text-center mb-16 text-yellow-300">MEET THE TEAM</h2>
 
-          <CollapsibleContent>
-            <div className="space-y-20">
-              {teamMembers.map((member, index) => (
-                <div 
-                  key={member.name}
-                  className={cn(
-                    "flex flex-col md:flex-row items-center gap-8",
-                    index % 2 === 1 && "md:flex-row-reverse"
-                  )}
-                >
-                  <div className="w-full md:w-2/5">
-                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
-                      <AspectRatio ratio={4/5}>
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </AspectRatio>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-3/5 space-y-4 px-4">
-                    <h3 className="text-2xl font-semibold">{member.name}</h3>
-                    <p className="text-lg text-gray-600 font-medium">{member.title}</p>
-                    <p className="text-gray-600 leading-relaxed">{member.description}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {teamMembers.map((member) => (
+            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-yellow-300">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 text-white">
+                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <p className="text-sm text-yellow-300">{member.title}</p>
+                <p className="text-sm mt-1">{member.description}</p>
+              </div>
             </div>
-          </CollapsibleContent>
-        </Collapsible>
+          ))}
+        </div>
       </div>
     </section>
   );
