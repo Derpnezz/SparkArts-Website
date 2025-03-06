@@ -1,5 +1,5 @@
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -42,13 +42,32 @@ export default function ImageSlideshow() {
     setSelectedIndex(api.selectedScrollSnap());
   }, [api]);
 
+  // Initialize a ref to store the interval ID
+  const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Function to reset and start the timer
+  const resetAndStartTimer = useCallback(() => {
+    if (autoplayIntervalRef.current) {
+      clearInterval(autoplayIntervalRef.current);
+    }
+    
+    autoplayIntervalRef.current = setInterval(() => {
+      if (api?.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api?.scrollTo(0);
+      }
+    }, 7500); // Changed to 7.5 seconds
+  }, [api]);
+
   // Navigate to a specific slide when a dot is clicked
   const scrollTo = useCallback(
     (index: number) => {
       if (!api) return;
       api.scrollTo(index);
+      resetAndStartTimer(); // Reset timer when dot is clicked
     },
-    [api]
+    [api, resetAndStartTimer]
   );
 
   // Auto-slide functionality
@@ -57,20 +76,16 @@ export default function ImageSlideshow() {
     
     api.on("select", onSelect);
     
-    // Auto-slide every 6 seconds
-    const autoplayInterval = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0);
-      }
-    }, 6000);
+    // Start the timer initially
+    resetAndStartTimer();
 
     return () => {
       api.off("select", onSelect);
-      clearInterval(autoplayInterval);
+      if (autoplayIntervalRef.current) {
+        clearInterval(autoplayIntervalRef.current);
+      }
     };
-  }, [api, onSelect]);
+  }, [api, onSelect, resetAndStartTimer]);
 
   return (
     <section className="py-16 bg-white">
