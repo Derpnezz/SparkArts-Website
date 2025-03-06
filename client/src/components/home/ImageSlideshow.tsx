@@ -76,8 +76,9 @@ export default function ImageSlideshow() {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Our Workshops in Action</h2>
+
         
-        <div className="relative w-full max-w-5xl mx-auto">
+        <div className="relative w-full max-w-5xl mx-auto"> 
           <Carousel 
             setApi={setApi} 
             className="w-full" 
@@ -85,7 +86,9 @@ export default function ImageSlideshow() {
           >
             <CarouselContent>
               {images.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/1 h-[400px]">
+            // ADJUST WIDTH ON div className="relative w-full..
+            // ADJUST HEIGHT HERE
+                <CarouselItem key={index} className="md:basis-1/1 h-[450px]">
                   <div className="p-1 h-full">
                     <div className="rounded-xl overflow-hidden h-full">
                       <img
