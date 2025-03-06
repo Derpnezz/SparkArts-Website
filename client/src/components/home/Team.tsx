@@ -77,11 +77,11 @@ export default function Team() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-blue-300">
+            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-blue-300 hover:border-blue-500 transition-colors"> {/* Added border and hover effect */}
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" {/* Added hover scale effect */}
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 text-white">
                 <h3 className="text-lg font-semibold">{member.name}</h3>
