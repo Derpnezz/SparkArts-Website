@@ -71,13 +71,13 @@ const teamMembers: TeamMember[] = [
 
 export default function Team() {
   return (
-    <section className="py-24" style={{ backgroundColor: "#003366" }}>
+    <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl font-bold text-center mb-16 text-yellow-300">MEET THE TEAM</h2>
+        <h2 className="text-6xl font-bold text-center mb-16 text-black-300">MEET THE TEAM</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-yellow-300">
+            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-blue-300">
               <img
                 src={member.image}
                 alt={member.name}
@@ -87,63 +87,6 @@ export default function Team() {
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-yellow-300">{member.title}</p>
                 <p className="text-sm mt-1">{member.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-import React from "react";
-
-export default function Team() {
-  const teamMembers = [
-    {
-      name: "Sarah Johnson",
-      role: "Founder & Art Director",
-      image: "https://img.freepik.com/free-photo/woman-teaching-class_23-2148633235.jpg",
-      bio: "Sarah is passionate about bringing arts to underprivileged communities and has been teaching art for over 5 years."
-    },
-    {
-      name: "Michael Chen",
-      role: "Program Coordinator",
-      image: "https://img.freepik.com/free-photo/portrait-young-man-with-students-background_23-2148638239.jpg",
-      bio: "Michael coordinates our workshops and events, ensuring every child gets the chance to explore their creative potential."
-    },
-    {
-      name: "Aisha Patel",
-      role: "Art Instructor",
-      image: "https://img.freepik.com/free-photo/young-woman-teacher-standing-front-class_23-2148633344.jpg",
-      bio: "Aisha specializes in multimedia art and loves helping children discover their unique artistic voice."
-    },
-    {
-      name: "David Rodriguez",
-      role: "Community Outreach",
-      image: "https://img.freepik.com/free-photo/young-male-teacher-writing-blackboard_23-2148204297.jpg",
-      bio: "David builds relationships with schools and community centers to expand our reach to more children."
-    }
-  ];
-
-  return (
-    <section className="py-24" style={{ backgroundColor: "#faf2e9" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-bold text-center mb-16">Our Team</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="relative overflow-hidden rounded-lg shadow-lg group">
-              <div className="h-80">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 text-white transform transition-all duration-300">
-                <h3 className="font-bold text-lg">{member.name}</h3>
-                <p className="text-primary font-medium">{member.role}</p>
-                <p className="mt-2 text-sm text-gray-200">{member.bio}</p>
               </div>
             </div>
           ))}
