@@ -1,4 +1,3 @@
-
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import {
   Carousel,
@@ -50,7 +49,7 @@ export default function ImageSlideshow() {
     if (autoplayIntervalRef.current) {
       clearInterval(autoplayIntervalRef.current);
     }
-    
+
     autoplayIntervalRef.current = setInterval(() => {
       if (api?.canScrollNext()) {
         api.scrollNext();
@@ -73,9 +72,9 @@ export default function ImageSlideshow() {
   // Auto-slide functionality
   useEffect(() => {
     if (!api) return;
-    
+
     api.on("select", onSelect);
-    
+
     // Start the timer initially
     resetAndStartTimer();
 
@@ -92,7 +91,7 @@ export default function ImageSlideshow() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Our Workshops in Action</h2>
 
-        
+
         <div className="relative w-full max-w-5xl mx-auto"> 
           <Carousel 
             setApi={setApi} 
@@ -101,8 +100,6 @@ export default function ImageSlideshow() {
           >
             <CarouselContent>
               {images.map((image, index) => (
-            // ADJUST WIDTH ON div className="relative w-full..
-            // ADJUST HEIGHT HERE
                 <CarouselItem key={index} className="md:basis-1/1 h-[450px]">
                   <div className="p-1 h-full">
                     <div className="rounded-xl overflow-hidden h-full">
@@ -116,10 +113,10 @@ export default function ImageSlideshow() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 lg:left-[-65px] top-1/2 transform -translate-y-1/2 h-12 w-12" />
-            <CarouselNext className="absolute right-4 lg:right-[-65px] top-1/2 transform -translate-y-1/2 h-14 w-8" />
+            <CarouselPrevious className="absolute left-4 lg:left-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-md rounded-full border-0" />
+            <CarouselNext className="absolute right-4 lg:right-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-md rounded-full border-0" />
           </Carousel>
-          
+
           <div className="flex justify-center mt-6">
             {images.map((_, index) => (
               <button
