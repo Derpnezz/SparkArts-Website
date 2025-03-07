@@ -77,13 +77,15 @@ export default function Team() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-pink-300">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-85 p-4 text-white">
+            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg border-2 border-pink-300 flex flex-col">
+              <div className="h-[300px] overflow-hidden relative">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-4 text-white bg-black bg-opacity-85">
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-pink-400">{member.title}</p>
                 <p className="text-sm mt-1">{member.description}</p>
