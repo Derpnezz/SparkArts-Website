@@ -113,8 +113,8 @@ export default function ImageSlideshow() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 lg:left-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-md rounded-full border-0" />
-            <CarouselNext className="absolute right-4 lg:right-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-md rounded-full border-0" />
+            <CarouselPrevious className="absolute left-4 lg:left-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-xl rounded-full border-2" />
+            <CarouselNext className="absolute right-4 lg:right-[-80px] top-1/2 transform -translate-y-1/2 h-14 w-14 bg-white shadow-xl rounded-full border-2" />
           </Carousel>
 
           <div className="flex justify-center mt-6">
