@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Karla Cruz Velasquez",
     title: "Communications Manager",
-    description: "Hello! My name is Karla Cruz Velasquez and I’m a freshman at Quince Orchard High School. Growing up I didn’t have many opportunities. I remember dreaming to go to an art camp every summer, but unlike my peers, I wasn’t very privileged and couldn't go. I also felt like I could not improve in my interest in art, which gave me a trapped feeling. Through this program, I hope to give students the chance to explore their creativity and express themselves freely through art. Happiness shouldn’t come with a price—it should be a gift we all can share.",
+    description: "I never got to attend art camp as a kid, so I want to give students the chance to explore creativity and experience the joy of art freely.",
     image: karlaPhoto
   },
   {
@@ -77,15 +77,15 @@ export default function Team() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-blue-300">
+            <div key={member.name} className="relative rounded-lg overflow-hidden shadow-lg h-[400px] border-2 border-pink-300">
               <img
                 src={member.image}
                 alt={member.name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 text-white">
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-85 p-4 text-white">
                 <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-sm text-yellow-300">{member.title}</p>
+                <p className="text-sm text-pink-400">{member.title}</p>
                 <p className="text-sm mt-1">{member.description}</p>
               </div>
             </div>
