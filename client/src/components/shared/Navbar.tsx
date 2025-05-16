@@ -15,7 +15,7 @@ export default function Navbar() {
               Home
             </Link>
             <a 
-              href="https://external-donation-site.com" 
+              href="https://donate.sparkarts.net" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary transition-colors"

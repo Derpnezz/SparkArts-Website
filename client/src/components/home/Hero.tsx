@@ -25,7 +25,7 @@ export default function Hero() {
 
           <div className="space-x-4">
             <a 
-              href="https://external-donation-site.com"
+              href="https://donate.sparkarts.net"
               target="_blank"
               rel="noopener noreferrer"
             >

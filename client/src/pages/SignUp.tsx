@@ -11,12 +11,10 @@ import { Card } from "@/components/ui/card";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
+// the different schools and links for the form
 const schools = [
-  "Brown Station Elementary School", "https://docs.google.com/forms/d/e/1FAIpQLScXuMY2d6_OBRrzxu9kzj3RuZ21ahqGowXaiu8TS9ulhW-uIA/viewform?usp=preview",
-  "Clopper Mill Elementary",
-  "https://external-student-signup.com/clopper-mill",
-  "Gaithersburg Elementary School",
-  "https://external-student-signup.com/gaithersburg"
+  "Brown Station Elementary School", "https://donate.sparkarts.net",
+  "Lake Seneca Elementary School", "https://donate.sparkarts.net"
 ];
 
 export default function SignUp() {
@@ -25,9 +23,10 @@ export default function SignUp() {
 
   const handleSignUp = () => {
     //window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+
+    // volunteer registration link
     if (registrationType === "volunteer") {
-      window.open("https://docs.google.com/forms/d/1soRY6YOasIm9xJDj2v3-lhkZxu6SFSBbRepi6iJ-avg/preview", "_blank", "noopener,noreferrer");
+      window.open("https://donate.sparkarts.net", "_blank", "noopener,noreferrer");
     } else if (registrationType === "child" && selectedSchool) {
       // Find the link for the selected school (it's at index + 1)
       const schoolIndex = schools.findIndex((item, index) => index % 2 === 0 && item === selectedSchool);

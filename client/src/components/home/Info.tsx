@@ -12,7 +12,7 @@ export default function Info() {
           <div className="w-full md:w-1/2">
             <div className="rounded-lg shadow-lg overflow-hidden">
               <img
-                src="https://www.quillsuk.co.uk/wp-content/uploads/2018/08/rawpixel-684806-unsplash-1030x686.jpg"
+                src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.15752-9/486787749_1372522947326164_4084768397385360335_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=A-O5lL0DtKQQ7kNvwGyTTw5&_nc_oc=AdlbdfHS5BxNhP257cYGpyFuCG6nQATB6pnGZxo1dfpv3nx3NZahMZL-pIQXhNilj-8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&oh=03_Q7cD2AHUCxG07UznClmCsb5ahAGgpDKvKKzd3EK3BVsC2-DqrQ&oe=681E8F0D"
                 alt="SparkArts Team"
                 className="w-full h-full object-cover"
               />
