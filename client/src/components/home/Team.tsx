@@ -9,7 +9,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import valeriePhoto from "./images/valerietsang.jpg";
-import jessicaPhoto from "./images/websitephoto_jessica.jpg";
+import jessicaPhoto from "./images/jesslima.jpeg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
 import liamPhoto from "./images/websitephoto_liam.jpg";
 import gabrielPhoto from "./images/websitephoto_gabriel.jpg";
