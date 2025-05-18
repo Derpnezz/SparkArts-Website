@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import valeriePhoto from "./images/websitephoto_valerie.jpg";
+import valeriePhoto from "./images/valerietsang.jpg";
 import jessicaPhoto from "./images/websitephoto_jessica.jpg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
 import liamPhoto from "./images/websitephoto_liam.jpg";
