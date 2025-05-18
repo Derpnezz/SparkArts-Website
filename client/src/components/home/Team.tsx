@@ -9,12 +9,12 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import valeriePhoto from "./images/valerietsang.jpg";
-import jessicaPhoto from "./images/jesslima.jpeg";
+import jessicaPhoto from "./images/jesslima.jpg";
 import cynthiaPhoto from "./images/websitephoto_cynthia.jpg";
 import liamPhoto from "./images/websitephoto_liam.jpg";
 import gabrielPhoto from "./images/websitephoto_gabriel.jpg";
 import karlaPhoto from "./images/websitephoto_karla.jpg";
-import joshuaPhoto from "./images/websitephoto_joshua.jpg";
+import joshuaPhoto from "./images/vujoshia.jpg";
 
 
 interface TeamMember {
