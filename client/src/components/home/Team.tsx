@@ -104,12 +104,35 @@ export default function Team() {
       </div>
 
       {selectedMember && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" onClick={handleClose}>
-          <div className="bg-white rounded-lg p-6" onClick={(e) => e.stopPropagation()}>
-            <h3 className="text-2xl font-semibold">{selectedMember.name}</h3>
-            <p className="text-lg text-gray-600">{selectedMember.title}</p>
-            <p className="text-gray-600 mt-2">{selectedMember.description}</p>
-            <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded" onClick={handleClose}>Close</button>
+        <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50" onClick={handleClose}>
+          <div className="relative bg-white rounded-2xl p-8 mx-4 max-w-md w-full shadow-2xl border-4 border-gray-800" onClick={(e) => e.stopPropagation()}>
+            {/* Speech bubble tail */}
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+              <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-t-[20px] border-l-transparent border-r-transparent border-t-gray-800"></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-0 h-0 border-l-[16px] border-r-[16px] border-t-[16px] border-l-transparent border-r-transparent border-t-white"></div>
+            </div>
+            
+            {/* Content */}
+            <div className="text-center">
+              <div className="mb-4">
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-pink-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-gray-800">{selectedMember.name}</h3>
+              <p className="text-lg text-pink-600 font-semibold mb-4">{selectedMember.title}</p>
+              <p className="text-gray-700 leading-relaxed text-sm italic">"{selectedMember.description}"</p>
+            </div>
+            
+            {/* Close button */}
+            <button 
+              className="absolute top-3 right-3 w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
+              onClick={handleClose}
+            >
+              ✕
+            </button>
           </div>
         </div>
       )}
