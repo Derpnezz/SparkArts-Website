@@ -25,13 +25,12 @@ export default function Info() {
             <h3 className="text-3xl font-semibold">About Us</h3>
             <p className="text-gray-600 leading-relaxed">
               SparkArts is a student-led initiative dedicated to bringing arts education to underserved communities. 
-              Founded by passionate high school students, our mission is to create equal art opportunities 
-              without financial barriers. We believe that every child deserves the chance to explore their 
-              creativity, develop artistic skills, and experience the joy of self-expression through various 
-              art forms.
+              Our mission is to create equal art opportunities without financial barriers. 
+              We believe that every child deserves the chance to explore their creativity, develop artistic skills, 
+              and experience the joy of self-expression through various art forms.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our team consists of dedicated young individuals who are committed to making a difference 
+              Our team consists of dedicated highschool students who are committed to making a difference 
               in our community through the power of art and creativity.
             </p>
           </div>
