@@ -35,7 +35,7 @@ export default function Footer() {
             <p className="text-gray-600">
               Email: SparkArts.official@gmail.com<br />
               Phone: (202) 604-4426<br />
-              Address: ----
+              EIN: 33-3355422
             </p>
           </div>
         </div>

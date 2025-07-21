@@ -31,8 +31,8 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Jessica Lema",
-    title: "Outreach Manager",
-    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS and the Secretary at SparkArts! Seeing the joy of children and people who don't have much especially in times like these, brings nothing but joy to my heart. I'm incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible.",
+    title: "Outreach Director",
+    description: "Hi, my name is Jessica and I'm a freshman at Quince Orchard HS and the Outreach Director at SparkArts! Seeing the joy of children and people who don't have much especially in times like these, brings nothing but joy to my heart. I'm incredibly blessed to be apart of this initiative and I hope to get as many people involved as possible.",
     image: jessicaPhoto
   },
   {
@@ -49,14 +49,14 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Karla Cruz Velasquez",
-    title: "Communications Manager",
-    description: "Hello! My name is Karla Cruz Velasquez. I'm a freshman at Quince Orchard High School and my role is Communications Manager in this program. Growing up I didn't have many opportunities. When I was younger I remember always wanting to go to an art camp every summer, but I wasn't very privileged like my peers which made it hard for me to express myself. I also felt like I could not improve in my interest in art, which gave me a trapped feeling. During my time in this program, I hope to make students come and express themselves through art, and to be able to do things they are genuinely interested in without their parents needing to work harder just for their own kid's happiness because happiness never has to come with a price.",
+    title: "Communications Director",
+    description: "Hello! My name is Karla Cruz Velasquez. I'm a freshman at Quince Orchard High School and my role is Communications Director in this program. Growing up I didn't have many opportunities. When I was younger I remember always wanting to go to an art camp every summer, but I wasn't very privileged like my peers which made it hard for me to express myself. I also felt like I could not improve in my interest in art, which gave me a trapped feeling. During my time in this program, I hope to make students come and express themselves through art, and to be able to do things they are genuinely interested in without their parents needing to work harder just for their own kid's happiness because happiness never has to come with a price.",
     image: karlaPhoto
   },
   {
     name: "Joshua Vu",
-    title: "Volunteer Engagement Manager",
-    description: "Hey, I'm Josh! I'm at freshman at Poolesville High School and the Volunteer Manager at SparkArts. As a kid, I didn't have a big interest in art but I learned how dynamic and expressive it can be. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
+    title: "Volunteer Engagement Director",
+    description: "Hey, I'm Josh! I'm at freshman at Poolesville High School and the Volunteer Director at SparkArts. As a kid, I didn't have a big interest in art but I learned how dynamic and expressive it can be. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
     image: joshuaPhoto
   },
   {
