@@ -6,7 +6,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useEmblaCarousel } from "embla-carousel-react";
+
+import threepm_group_photo_olneysummerfest2025 from "./slides_images/IMG_3010.JPG";
+import asian_kid_tats_flex from "./slides_images/IMG_3023.JPG";
+import hand_painting from "./slides_images/IMG_2999.jpeg"
+import olney_summerfest_2025_workshop from "./slides_images/IMG_3026.JPG"
+import IMG_3031 from "./slides_images/IMG_3031.JPG"
+import IMG_3032 from "./slides_images/IMG_3032.JPG"
 
 export default function ImageSlideshow() {
   const [api, setApi] = useState<any>(null);
@@ -14,37 +20,36 @@ export default function ImageSlideshow() {
 
   const images = [
     {
-      src: "https://img.freepik.com/free-photo/kids-having-fun-art-class_23-2148774342.jpg",
-      alt: "Kids painting in art class",
+      src: threepm_group_photo_olneysummerfest2025,
+      alt: "Group photo for the 3pm shift at Olney Summerfest 2025!",
     },
     {
-      src: "https://img.freepik.com/free-photo/children-having-fun-art-class_23-2148630935.jpg",
-      alt: "Children doing crafts",
+      src: asian_kid_tats_flex,
+      alt: "A happy kid displays his hand paintings!",
     },
     {
-      src: "https://img.freepik.com/free-photo/children-having-fun-art-class-learning-draw_23-2149038842.jpg",
-      alt: "Kids learning to draw",
+      src: hand_painting,
+      alt: "Cynthia and Valerie hand painting with some kids!"
     },
     {
-      src: "https://img.freepik.com/free-photo/kids-making-clay-crafts_23-2149038880.jpg",
-      alt: "Children making clay crafts",
+      src: olney_summerfest_2025_workshop,
+      alt: "Olney Summerfest 2025 Workshop"
     },
     {
-      src: "https://img.freepik.com/free-photo/kids-having-fun-art-class_23-2149038913.jpg",
-      alt: "Kids enjoying art class",
+      src: IMG_3031
+    },
+    {
+      src: IMG_3032
     },
   ];
 
-  // Update selected index when slide changes
   const onSelect = useCallback(() => {
     if (!api) return;
     setSelectedIndex(api.selectedScrollSnap());
   }, [api]);
 
-  // Initialize a ref to store the interval ID
   const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Function to reset and start the timer
   const resetAndStartTimer = useCallback(() => {
     if (autoplayIntervalRef.current) {
       clearInterval(autoplayIntervalRef.current);
@@ -56,26 +61,19 @@ export default function ImageSlideshow() {
       } else {
         api?.scrollTo(0);
       }
-    }, 7500); // Changed to 7.5 seconds
+    }, 7500);
   }, [api]);
 
-  // Navigate to a specific slide when a dot is clicked
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (!api) return;
-      api.scrollTo(index);
-      resetAndStartTimer(); // Reset timer when dot is clicked
-    },
-    [api, resetAndStartTimer]
-  );
+  const scrollTo = useCallback((index: number) => {
+    if (!api) return;
+    api.scrollTo(index);
+    resetAndStartTimer();
+  }, [api, resetAndStartTimer]);
 
-  // Auto-slide functionality
   useEffect(() => {
     if (!api) return;
 
     api.on("select", onSelect);
-
-    // Start the timer initially
     resetAndStartTimer();
 
     return () => {
@@ -90,23 +88,17 @@ export default function ImageSlideshow() {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Our Workshops in Action</h2>
-
-
-        <div className="relative w-full max-w-5xl mx-auto"> 
-          <Carousel 
-            setApi={setApi} 
-            className="w-full" 
-            opts={{ loop: true, align: "start" }}
-          >
+        <div className="relative w-full max-w-5xl mx-auto">
+          <Carousel setApi={setApi} className="w-full" opts={{ loop: true, align: "start" }}>
             <CarouselContent>
               {images.map((image, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 h-[450px]">
                   <div className="p-1 h-full">
-                    <div className="rounded-xl overflow-hidden h-full">
+                    <div className="rounded-xl overflow-hidden h-full flex items-center justify-center">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover"
+                        className="object-contain w-full h-full"
                       />
                     </div>
                   </div>

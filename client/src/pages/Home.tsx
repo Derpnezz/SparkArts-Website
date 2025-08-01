@@ -13,6 +13,7 @@ export default function Home() {
       <Hero />
       {/* <Story /> */}
       <Info />
+      <ImageSlideshow />
       {/* <ImageSlideshow /> */}
       <Team />
       <Footer />
