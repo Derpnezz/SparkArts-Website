@@ -10,6 +10,7 @@ import {
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import { Link } from "wouter";
 
 // the different schools and links for the form
 /*
@@ -19,7 +20,8 @@ const schools = [
 ];
 */
 const schools = [
-  "Lake Seneca Elementary School", "https://forms.gle/bwHmJv4dKcYqD5QN7"
+  "Lake Seneca Elementary School",
+  "https://forms.gle/bwHmJv4dKcYqD5QN7"
 ];
 const volunteerForm = "https://forms.gle/id88TDpf7YNWaC1c7";
 
@@ -33,11 +35,13 @@ export default function SignUp() {
     // volunteer registration link
     if (registrationType === "volunteer") {
       window.open(volunteerForm, "_blank", "noopener,noreferrer");
+      window.open("/", "_self");
     } else if (registrationType === "child" && selectedSchool) {
       // Find the link for the selected school (it's at index + 1)
       const schoolIndex = schools.findIndex((item, index) => index % 2 === 0 && item === selectedSchool);
       const schoolLink = schools[schoolIndex + 1];
       window.open(schoolLink, "_blank", "noopener,noreferrer");
+      window.open("/", "_self");
     }
   };
 
