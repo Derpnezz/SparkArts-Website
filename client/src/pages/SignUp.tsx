@@ -12,9 +12,14 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 // the different schools and links for the form
+/*
 const schools = [
   "Brown Station Elementary School", "https://donate.sparkarts.net",
-  "Lake Seneca Elementary School", "https://donate.sparkarts.net"
+  "Lake Seneca Elementary School", "https://forms.gle/bwHmJv4dKcYqD5QN7"
+];
+*/
+const schools = [
+  "Lake Seneca Elementary School", "https://forms.gle/bwHmJv4dKcYqD5QN7"
 ];
 const volunteerForm = "https://forms.gle/id88TDpf7YNWaC1c7";
 
