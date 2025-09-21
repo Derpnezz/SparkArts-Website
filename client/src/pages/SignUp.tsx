@@ -16,6 +16,7 @@ const schools = [
   "Brown Station Elementary School", "https://donate.sparkarts.net",
   "Lake Seneca Elementary School", "https://donate.sparkarts.net"
 ];
+const volunteerForm = "https://forms.gle/id88TDpf7YNWaC1c7";
 
 export default function SignUp() {
   const [registrationType, setRegistrationType] = useState<string>("");
@@ -26,7 +27,7 @@ export default function SignUp() {
 
     // volunteer registration link
     if (registrationType === "volunteer") {
-      window.open("https://donate.sparkarts.net", "_blank", "noopener,noreferrer");
+      window.open(volunteerForm, "_blank", "noopener,noreferrer");
     } else if (registrationType === "child" && selectedSchool) {
       // Find the link for the selected school (it's at index + 1)
       const schoolIndex = schools.findIndex((item, index) => index % 2 === 0 && item === selectedSchool);
