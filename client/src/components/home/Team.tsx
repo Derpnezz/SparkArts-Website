@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Valerie Tsang",
     title: "Founder and Executive Director",
-    description: "Hi! My name is Valerie Tsang. I'm a freshman at Poolesville High School and the Founder of SparkArts! When I was younger, I was privileged to go to art camp every summer. I learned a lot about my interest in art early on, and there were camp counselors who really helped me come out of my shell as a shy kid. I want to help create equal art opportunities without financial barriers. Through SparkArts, I hope all children can be free to explore their artistic creativity, have fun with art, and grow as artists/students.",
+    description: "Hi! My name is Valerie Tsang and I am the founder of SparkArts! I am currently a sophmore at Poolesville High School! I started SparkArts because I believe that every student should have the equal opportunity to have fun and create art without any barriers. I hope all children can learn and grow as artists and students. I love creating arts and crafts and cannot wait to share the joy with students!",
     image: valeriePhoto
   },
   {
@@ -38,7 +38,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Cynthia Yu",
     title: "Creative Director",
-    description: "Hi, I’m Cynthia Yu and I'm a 9th grader at Poolesville High School. I'm the Creative Director for SparkArts! Art and drawing has always been an important part of my life so I was excited to join SparkArts to spread it to others. I hope that through SparkArts, I can help other children find their passion in art, whether it be with color pencils, origami, clay, digital art, and so much more!",
+    description: "Hi, I’m Cynthia Yu and I'm the Creative Director of SparkArts! I'm currently a sophomore at Poolesville High School. I hope I can inspire many others to discover their passion for art. Art has been my way of expressing myself since I was in elementary school and I woul dlove to give back that love for art through SparkArts.",
     image: cynthiaPhoto
   },
   {
@@ -56,7 +56,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Joshua Vu",
     title: "Volunteer Engagement Director",
-    description: "Hey, I'm Josh! I'm at freshman at Poolesville High School and the Volunteer Director at SparkArts. As a kid, I didn't have a big interest in art but I learned how dynamic and expressive it can be. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
+    description: "Hey, I'm Josh! I'm a sophmore at Poolesville High School and the Volunteer Director at SparkArts. As a kid, I didn't have the big interest in art, but now, I love the endless ways art can be expressed through. I want to help people find their creativity and passion through art early with a fostering community. I hope we can inspire and support everyone!",
     image: joshuaPhoto
   },
   {
