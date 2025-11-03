@@ -55,7 +55,7 @@ const teamMembers: TeamMember[] = [
     name: "Karla Cruz Velasquez",
     title: "Communications Director",
     description:
-      "Hello! My name is Karla Cruz Velasquez. I'm a freshman at Quince Orchard High School, and my role is Communications Director in this program. As a child, I didn't have opportunities like my peers to express myself through art, which impacted me hard as I grew up. now, I joined SparkArts in hopes of making those kids who aren't very privileged experience something every kid should without any cost blocking it.",
+      "Hello! My name is Karla Cruz Velasquez. I'm a sophmore at Quince Orchard High School, and my role is Communications Director in this program. As a child, I didn't have opportunities like my peers to express myself through art, which impacted me hard as I grew up. now, I joined SparkArts in hopes of making those kids who aren't very privileged experience something every kid should without any cost blocking it.",
     image: karlaPhoto,
   },
   {
