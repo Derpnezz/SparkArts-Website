@@ -34,7 +34,7 @@ export default function ImageSlideshow() {
       return {
         src: module.default,
         //alt: imageAltTexts[filename] || 'SparkArts workshop photo',
-        alt: "SparkArts working ",
+        alt: "SparkArts photo",
       };
     })
     .sort((a, b) => {

@@ -11,7 +11,7 @@ import valeriePhoto from "./images/valerietsang.jpg";
 import jessicaPhoto from "./images/jesslima.jpg";
 import cynthiaPhoto from "./images/cynthia_photo.jpeg";
 import liamPhoto from "./images/websitephoto_liam.jpg";
-import gabrielPhoto from "./images/websitephoto_gabriel.jpg";
+import gabrielPhoto from "./images/IMG_3654732.jpg";
 import karlaPhoto from "./images/websitephoto_karla.jpg";
 import joshuaPhoto from "./images/vujoshia.jpg";
 
