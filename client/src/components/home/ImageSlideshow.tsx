@@ -11,6 +11,7 @@ const imageModules = import.meta.glob<{ default: string }>('./slides_images/*.{j
   eager: true 
 });
 
+/*
 const imageAltTexts: Record<string, string> = {
   'IMG_3010.JPG': 'Group photo for the 3pm shift at Olney Summerfest 2025!',
   'IMG_3023.JPG': 'A happy kid displays his hand paintings!',
@@ -21,6 +22,7 @@ const imageAltTexts: Record<string, string> = {
   'IMG_3632.jpg': 'Creative art activities',
   'IMG_3635.jpg': 'Hands-on learning experience',
 };
+*/
 
 export default function ImageSlideshow() {
   const [api, setApi] = useState<any>(null);
@@ -31,7 +33,8 @@ export default function ImageSlideshow() {
       const filename = path.split('/').pop() || '';
       return {
         src: module.default,
-        alt: imageAltTexts[filename] || 'SparkArts workshop photo',
+        //alt: imageAltTexts[filename] || 'SparkArts workshop photo',
+        alt: "SparkArts working ",
       };
     })
     .sort((a, b) => {
