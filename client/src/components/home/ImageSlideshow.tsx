@@ -7,41 +7,37 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import threepm_group_photo_olneysummerfest2025 from "./slides_images/IMG_3010.JPG";
-import asian_kid_tats_flex from "./slides_images/IMG_3023.JPG";
-import hand_painting from "./slides_images/IMG_2999.jpeg"
-import olney_summerfest_2025_workshop from "./slides_images/IMG_3026.JPG"
-import IMG_3031 from "./slides_images/IMG_3031.JPG"
-import IMG_3032 from "./slides_images/IMG_3032.JPG"
+const imageModules = import.meta.glob<{ default: string }>('./slides_images/*.{jpg,jpeg,JPG,JPEG,png,PNG}', { 
+  eager: true 
+});
+
+const imageAltTexts: Record<string, string> = {
+  'IMG_3010.JPG': 'Group photo for the 3pm shift at Olney Summerfest 2025!',
+  'IMG_3023.JPG': 'A happy kid displays his hand paintings!',
+  'IMG_2999.jpeg': 'Cynthia and Valerie hand painting with some kids!',
+  'IMG_3026.JPG': 'Olney Summerfest 2025 Workshop',
+  'IMG_3031.JPG': 'SparkArts workshop in action',
+  'IMG_3032.JPG': 'Students creating art together',
+  'IMG_3632.jpg': 'Creative art activities',
+  'IMG_3635.jpg': 'Hands-on learning experience',
+};
 
 export default function ImageSlideshow() {
   const [api, setApi] = useState<any>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const images = [
-    {
-      src: threepm_group_photo_olneysummerfest2025,
-      alt: "Group photo for the 3pm shift at Olney Summerfest 2025!",
-    },
-    {
-      src: asian_kid_tats_flex,
-      alt: "A happy kid displays his hand paintings!",
-    },
-    {
-      src: hand_painting,
-      alt: "Cynthia and Valerie hand painting with some kids!"
-    },
-    {
-      src: olney_summerfest_2025_workshop,
-      alt: "Olney Summerfest 2025 Workshop"
-    },
-    {
-      src: IMG_3031
-    },
-    {
-      src: IMG_3032
-    },
-  ];
+  const images = Object.entries(imageModules)
+    .map(([path, module]) => {
+      const filename = path.split('/').pop() || '';
+      return {
+        src: module.default,
+        alt: imageAltTexts[filename] || 'SparkArts workshop photo',
+      };
+    })
+    .sort((a, b) => {
+      const getFilename = (obj: typeof a) => obj.alt;
+      return getFilename(a).localeCompare(getFilename(b));
+    });
 
   const onSelect = useCallback(() => {
     if (!api) return;
