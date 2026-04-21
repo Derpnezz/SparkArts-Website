@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – SparkArts</title>
+  <link rel="icon" type="image/png" href="images/favicon_words.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">SparkArts</a>
+      <div class="navbar-links">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="https://pay.sparkarts.net" target="_blank" rel="noopener noreferrer">Donate</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIGNUP CONTENT -->
+  <main class="signup-main">
+    <div class="signup-container">
+      <div class="signup-header">
+        <h1>Join Our Program</h1>
+        <p>Select your registration type and follow the prompts to complete your signup.</p>
+      </div>
+
+      <div class="card">
+        <div class="form-group">
+          <label class="form-label" for="registrationType">Registration Type</label>
+          <select class="form-select" id="registrationType">
+            <option value="" disabled selected>Select registration type</option>
+            <option value="child">Child Registration</option>
+            <option value="volunteer">Volunteer Registration</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="schoolGroup" style="display:none;">
+          <label class="form-label" for="schoolSelect">Select School</label>
+          <select class="form-select" id="schoolSelect">
+            <option value="" disabled selected>Select your school</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary btn-full" id="continueBtn" disabled>
+          Continue to Registration
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/favicon_words.png" alt="SparkArts" />
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://sparkarts.net">Home Page</a></li>
+          <li><a href="https://www.instagram.com/sparkartsmoco/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://pay.sparkarts.net" target="_blank" rel="noopener noreferrer">Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: SparkArts.official@gmail.com<br />Phone: (202) 604-4426<br />EIN: 33-3355422</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> SparkArts Corporation. All rights reserved.</p>
+      <p>Website managed by Gabriel Yee</p>
+    </div>
+  </footer>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>
