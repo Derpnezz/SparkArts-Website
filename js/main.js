@@ -120,7 +120,7 @@ const teamMembers = [
   {
     name: 'Sammy Lu',
     title: 'Art Coordinator',
-    description: "Coming soon!",
+    description: "Hello! I'm Sammy, and I'm the Art Coordinator for Sparkarts. I've always loved making art whether it be drawing, playing music, or making films. With SparkArts, I hope to share the joy of self expression!",
     image: 'sammy.jpeg',
   },
   {
